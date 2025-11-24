@@ -1,0 +1,97 @@
+
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Unhas By Caty - Rosa Glam</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand">Unhas By Caty<span class="dot">.</span></a>
+    <nav>
+      <a href="#home" class="nav-link">Home</a>
+      <a href="#services" class="nav-link">Serviços</a>
+      <a href="#gallery" class="nav-link">Galeria</a>
+      <a href="#book" class="nav-link btn-ghost">Agendar</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-left">
+        <h1>Sua melhor versão começa pelas mãos. <span class="accent">Unhas que destacam sua personalidade.</span></h1>
+        <p class="lead">Agende online, personalize o estilo e relaxe, nós fazemos acontecer!</p>
+        <div class="cta-row">
+          <button id="orderBtn" class="btn-primary">Gerar pedido</button>
+          <a href="#book" class="btn-outline">Agendar agora</a>
+        </div>
+      </div>
+      <div class="hero-right">
+        <div class="nail-carousel" id="nailCarousel"></div>
+      </div>
+    </section>
+
+    <section id="services" class="services">
+      <h2>Serviços</h2>
+      <div class="services-grid">
+        <div class="card"> <h3>Acrílico</h3><p>Alongamento e design com acabamento profissional.</p></div>
+        <div class="card"> <h3>Gel</h3><p>Durabilidade e brilho intenso.</p></div>
+        <div class="card"> <h3>Decoração</h3><p>Ilustrações, glitter e pedras para ocasiões especiais.</p></div>
+      </div>
+    </section>
+
+    <section id="gallery" class="gallery">
+      <h2>Galeria</h2>
+      <div class="gallery-grid">
+        <img src="https://i.ibb.co/Vc25XVwL/fotoimg5.jpg" alt="">
+        <img src="https://i.ibb.co/MDQ6MnPV/fotoimg6.jpg" alt="">
+        <img src="https://i.ibb.co/BVZsBWnk/fotoimg7.jpg" alt="">
+        <img src="https://i.ibb.co/nN7fZqKM/M-dia.jpg" alt="">
+      </div>
+    </section>
+
+    <section id="book" class="book">
+      <h2>Agende já</h2>
+      <form id="bookForm" class="book-form">
+        <div class="row">
+          <label>Nome<input name="name" required></label>
+          <label>Telefone<input name="phone"></label>
+        </div>
+        <label>Serviço
+          <select name="service">
+            <option>Acrílico</option>
+            <option>Gel</option>
+            <option>Manicure + esmaltação</option>
+            <option>Decoração</option>
+          </select>
+        </label>
+        <div class="row">
+          <label>Data<input type="date" name="date" required></label>
+          <label>Hora<input type="time" name="time" required></label>
+        </div>
+        <label>Observações<textarea name="notes" rows="3"></textarea></label>
+        <div class="form-actions">
+          <button type="submit" class="btn-primary">Confirmar</button>
+          <button type="button" id="estimateBtn" class="btn-outline">Calcular tempo</button>
+        </div>
+        <div id="formResult" class="form-result" aria-live="polite"></div>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>©Unhas By Caty</p>
+  </footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.28.0/feather.min.js"></script>
+
+  <!-- Firebase SDKs (compat) -->
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
+  <script type="module" src="firebase-config.js"></script>
+
+<script src="app.js"></script>
+</body>
+</html>
